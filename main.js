@@ -127,3 +127,51 @@ scrollTopBtn.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+const form = document.getElementById("web3form");
+const success = document.getElementById("form-success");
+const error = document.getElementById("form-error");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+  fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    body: formData
+  })
+    .then(response => response.json())
+    .then(result => {
+      if (result.success) {
+        success.style.display = "block";
+        error.style.display = "none";
+        form.reset();
+      } else {
+        success.style.display = "none";
+        error.style.display = "block";
+      }
+    })
+    .catch(() => {
+      success.style.display = "none";
+      error.style.display = "block";
+    });
+});
+
+ScrollReveal({
+  distance: '50px',
+  duration: 1000,
+  delay: 200,
+  reset: true // animation happens every time you scroll back
+});
+
+// Animate sections using your original classes
+ScrollReveal().reveal('.section-title', { origin: 'top' });
+ScrollReveal().reveal('.home__data', { origin: 'left' });
+ScrollReveal().reveal('.home__img-container', { origin: 'right' });
+ScrollReveal().reveal('.about__container', { origin: 'bottom' });
+ScrollReveal().reveal('.skills__img', { origin: 'top' });
+// ScrollReveal().reveal('.skills__container > div', { origin: 'bottom', interval: 100 });
+ScrollReveal().reveal('text-xl font-bold mb-4', { origin: 'bottom', interval: 100 });
+ScrollReveal().reveal('.work__item', { origin: 'bottom', interval: 150 });
+ScrollReveal().reveal('.contact__form', { origin: 'top' });
+
+
