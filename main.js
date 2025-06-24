@@ -169,8 +169,7 @@ ScrollReveal().reveal('.home__data', { origin: 'left' });
 ScrollReveal().reveal('.home__img-container', { origin: 'right' });
 ScrollReveal().reveal('.about__container', { origin: 'bottom' });
 ScrollReveal().reveal('.skills__img', { origin: 'top' });
-// ScrollReveal().reveal('.skills__container > div', { origin: 'bottom', interval: 100 });
-ScrollReveal().reveal('text-xl font-bold mb-4', { origin: 'bottom', interval: 100 });
+ScrollReveal().reveal('.skills__container > div', { origin: 'bottom', interval: 100 });
 ScrollReveal().reveal('.work__item', { origin: 'bottom', interval: 150 });
 ScrollReveal().reveal('.contact__form', { origin: 'top' });
 
