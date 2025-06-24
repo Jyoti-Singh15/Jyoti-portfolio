@@ -7,8 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
-
-
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="icon" href="favicon.ico" type="image/png">
 
     <title>Jyoti's portfolio</title>
 </head>
@@ -84,99 +85,80 @@
         
 <!--===== SKILLS =====-->
 <section class="skills section" id="skills">
-    <h1 class="section-title">     Skills</h1>
+  <h2 class="section-title">My Skills</h2>
+  <div class="skills__grid">
+  
 
-    <div class="skills__container bd-grid">
 
-        <!-- Professional Skills -->
-        <div>
-            <h2 class="skills__subtitle"><b>Professional Skills</b></h2>
-            <p class="skills__text">Here are some of the technical skills I've developed so far:</p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 max-w-6xl mx-auto px-4 py-10 text-blue-700">
 
-            <!-- Python Skill -->
-            <div class="skills__data">
-                <div class="skills__names">
-                    <i class="bx bxl-python skills__icon"></i>
-                    <span class="skills__name">Python</span>
-                </div>
-            </div>
-            <div class="skills__data">
-                <div class="skills__names">
-                    <i class="bx bxl-c-plus-plus skills__icon"></i>
-                    <span class="skills__name">C++ With DSA</span>
-                </div>
-            </div>
-
-            <!-- HTML5 Skill -->
-            <div class="skills__data">
-                <div class="skills__names">
-                    <i class="bx bxl-html5 skills__icon"></i>
-                    <span class="skills__name">HTML5</span>
-                </div>
-                
-            </div>
-
-            <!-- CSS3 Skill -->
-            <div class="skills__data">
-                <div class="skills__names">
-                    <i class="bx bxl-css3 skills__icon"></i>
-                    <span class="skills__name">CSS3</span>
-                </div>
-                
-            </div>
-
-            <!-- JavaScript Skill -->
-            <div class="skills__data">
-                <div class="skills__names">
-                    <i class="bx bxl-javascript skills__icon"></i>
-                    <span class="skills__name">JavaScript</span>
-                </div>
-                
-            </div>
-            
-        </div>
-
-        <!-- Soft Skills -->
-        <div>
-            <h2 class="skills__subtitle"><b>Soft Skills</b></h2>
-            <p class="skills__text">Skills I use to collaborate and work with teams:</p>
-
-           
-            <div class="skills__data">
-                <div class="skills__names">
-                    <i class="bx bx-chat skills__icon"></i>
-                    <span class="skills__name">Communication</span>
-                </div>
-                
-            </div>
-
-            <div class="skills__data">
-                <div class="skills__names">
-                    <i class="bx bx-brain skills__icon"></i>
-                    <span class="skills__name">Problem Solving</span>
-                </div>
-                
-            </div>
-            <div class="skills__data">
-                <div class="skills__names">
-                    
-                    <i class="bx bxs-group skills__icon"></i>
-                    <span class="skills__name">Teamwork</span>
-                </div>
-            </div>
-            <div class="skills__data">
-                <div class="skills__names">
-                    
-                    <i class="bx bx-brain skills__icon"></i>
-                    <span class="skills__name">Decision-Making</span>
-                </div>
-            </div>
-        </div>
-
+    <!-- Programming Languages -->
+    <div class="bg-white shadow-md rounded-xl p-6">
+      <h3 class="text-xl font-bold mb-4">Programming Languages</h3>
+      <ul class="space-y-2">
+        <li class="flex items-center gap-2"><i class="fab fa-python"></i> Python</li>
+        <li class="flex items-center gap-2"><i class="fas fa-code"></i> C++</li>
+        <li class="flex items-center gap-2"><i class="fab fa-js"></i> JavaScript</li>
+        
+      </ul>
     </div>
+
+    <!-- Frontend Development -->
+    <div class="bg-white shadow-md rounded-xl p-6">
+      <h3 class="text-xl font-bold mb-4">Frontend Development</h3>
+      <ul class="space-y-2">
+        <li class="flex items-center gap-2"><i class="fab fa-html5"></i> HTML5</li>
+        <li class="flex items-center gap-2"><i class="fab fa-css3-alt"></i> CSS3</li>
+        <li class="flex items-center gap-2"><i class="fab fa-react"></i> React.js</li>
+        <li class="flex items-center gap-2"><i class="fas fa-wind"></i> Tailwind CSS</li>
+      </ul>
+    </div>
+
+    <!-- Backend Development -->
+    <div class="bg-white shadow-md rounded-xl p-6">
+      <h3 class="text-xl font-bold mb-4">Backend Development</h3>
+      <ul class="space-y-2">
+        <li class="flex items-center gap-2"><i class="fab fa-node-js"></i> Node.js</li>
+        <li class="flex items-center gap-2"><i class="fas fa-server"></i> Express.js</li>
+        <li class="flex items-center gap-2"><i class="fas fa-link"></i> RESTful API Design</li>
+      </ul>
+    </div>
+
+    <!-- Database & Tools -->
+    <div class="bg-white shadow-md rounded-xl p-6">
+      <h3 class="text-xl font-bold mb-4">Database & Tools</h3>
+      <ul class="space-y-2">
+        <li class="flex items-center gap-2"><i class="fas fa-database"></i> MySQL</li>
+        <li class="flex items-center gap-2"><i class="fas fa-leaf"></i> MongoDB </li>
+        <li class="flex items-center gap-2"><i class="fab fa-git-alt"></i> GitHub</li>
+        
+      </ul>
+    </div>
+    <!-- Tools I Use -->
+<div class="bg-white shadow-md rounded-xl p-6">
+  <h3 class="text-xl font-bold mb-4">Tools I Use</h3>
+  <ul class="space-y-2 text-blue-700">
+    <li class="flex items-center gap-2"><i class="fas fa-code"></i> VS Code</li>
+    <li class="flex items-center gap-2"><i class="fas fa-terminal"></i> Git Bash</li>
+    <li class="flex items-center gap-2"><i class="fas fa-rocket"></i> Vercel</li>
+  </ul>
+</div>
+
+
+    <!-- Soft Skills -->
+    <div class="bg-white shadow-md rounded-xl p-6">
+      <h3 class="text-xl font-bold mb-4">Soft Skills</h3>
+      <ul class="space-y-2">
+        <li class="flex items-center gap-2"><i class="fas fa-comments"></i> Communication</li>
+        <li class="flex items-center gap-2"><i class="fas fa-lightbulb"></i> Problem Solving</li>
+        <li class="flex items-center gap-2"><i class="fas fa-users"></i> Teamwork</li>
+        <li class="flex items-center gap-2"><i class="fas fa-balance-scale"></i> Decision Making</li>
+      </ul>
+    </div>
+
+  </div>
+  </div>
 </section>
-
-
                 <div>              
                     <img src="assets/img/work3.jpg" alt="" class="skills__img" data-sr-id="9" style="visibility: visible; opacity: 0; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -60, 0, 1);">
                 </div>
@@ -211,39 +193,40 @@
 </div>
 
 </section>
-
-
-        
-
         <!--===== CONTACT SECTION =====-->
 <section class="contact section" id="contact">
     <h2 class="section-title">Contact Me</h2>
     
     <div class="contact__container bd-grid">
-        
-        <form action="https://formsubmit.co/jyotisinghd106@gmail.com" method="POST" class="contact__form">
-    <div class="contact__form__item">
-        <label for="name">Your Name</label>
-        <input type="text" name="name" required placeholder="Enter your name">
-    </div>
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact__form" id="web3form">
+            
+            <input type="hidden" name="access_key" value="1e101045-d3d4-4565-a97e-dc9331413be0" />
 
-    <div class="contact__form__item">
-        <label for="email">Your Email</label>
-        <input type="email" name="email" required placeholder="Enter your email">
-    </div>
+            <div class="contact__form__item">
+                <label for="name">Your Name</label>
+                <input type="text" name="name" required placeholder="Enter your name">
+            </div>
 
-    <div class="contact__form__item">
-        <label for="message">Your Message</label>
-        <textarea name="message" required placeholder="Write your message here..." rows="5"></textarea>
-    </div>
+            <div class="contact__form__item">
+                <label for="email">Your Email</label>
+                <input type="email" name="email" required placeholder="Enter your email">
+            </div>
 
-    <button type="submit">Send Message</button>
-</form>
+            <div class="contact__form__item">
+                <label for="message">Your Message</label>
+                <textarea name="message" required placeholder="Write your message here..." rows="5"></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+            <div id="form-success" style="display: none; color: green; margin-top: 1rem;">Thank you! Message sent successfully.</div>
+        <div id="form-error" style="display: none; color: red; margin-top: 1rem;">Oops! Something went wrong. Try again.</div>
+        </form>
 
         
         
     </div>
 </section>
+
 
 <!-- ===== FOOTER SECTION ===== -->
 <footer class="footer">
