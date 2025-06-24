@@ -100,11 +100,10 @@ a {
 
 .home__data {
     text-align: left;
-    animation: fadeInUp 1.5s ease-out;
     align-content: left;
     margin-left: 5%;
     text-align: left;
-    animation: fadeInUp 2s ease-out;
+    animation: fadeInUp 1.2s ease-out forwards;
 }
 
 .home__title {
@@ -122,15 +121,15 @@ a {
 .home__img-container {
     display: flex;
     justify-content: center;
-    animation: fadeIn 2s ease-in-out;
+    animation: fadeInUp 1.2s ease-out forwards;
 }
 
 .home__img-professional {
-    width: 210px;
-    height: 210px;
+    width: 280px;
+    height: 280px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid #6a11cb;
+    border: 4px solid #2e07c8;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -144,7 +143,7 @@ a {
     border-width: 2px;
     border-color: black;
     position: relative;
-    animation: fadeIn 2s ease-in-out;
+    /* animation: fadeIn 2s ease-in-out; */
 }
 
 .button {
@@ -218,15 +217,16 @@ a {
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
 
 .about {
     padding: 4rem 2rem;
@@ -353,60 +353,69 @@ a {
     margin-bottom: 20px;
 }
 
-.work__container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+ .work__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 .work__item {
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    width: 300px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.work__item:hover {
-    transform: translateY(-10px);
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 0 20px;
 }
 
 .work__item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 
 .work__description {
-    padding: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .work__description h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  white-space: nowrap;    
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .work__description p {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 15px;
+  flex-grow: 1;
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 20px;
 }
 
 .work__link {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+  align-self: flex-start;
+  padding: 10px 16px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
 }
 
 .work__link:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
+
 
 .contact.section {
     padding: 3rem 1rem;
@@ -474,6 +483,50 @@ a {
 .contact__form button:hover {
     background-color: #0056b3;
 }
+/* Popup Background */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  z-index: 999;
+}
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: none;
+  min-width: 300px;
+  animation: fadeInPopup 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeInPopup {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -45%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.close-btn {
+  float: right;
+  color: red;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 
 .footer {
     background-color: #2d2d2d;
